@@ -1,87 +1,110 @@
 # 🛠️ Incident Response Plan (IRP)
 
-**Purpose**  
-To outline the structured approach for detecting, responding to, and recovering from cybersecurity incidents affecting [Organization Name]'s systems, data, or infrastructure.
+**Purpose:**  
+This document establishes a formal structure for identifying, responding to, containing, and recovering from cybersecurity incidents that impact the confidentiality, integrity, or availability of [Organization Name]’s digital assets and operations.
 
 ---
 
 ## 1. Scope  
-This plan applies to all departments and personnel handling or managing IT assets within [Organization Name].
+This plan applies to:
+- All employees, contractors, and third-party users
+- All IT systems, networks, applications, and data owned or managed by [Organization Name]
+- Remote and on-premise assets under corporate governance
 
 ---
 
-## 2. Incident Definition  
-A **cybersecurity incident** is any event that threatens the confidentiality, integrity, or availability of organizational data or systems. Examples include:
-- Malware infections (ransomware, spyware)
-- Data breaches or unauthorized access
-- Phishing or social engineering attempts
-- System compromise or insider threats
+## 2. Policy Objectives
+- Minimize damage from cybersecurity incidents
+- Protect organizational data and infrastructure
+- Ensure compliance with GDPR, DPA 2018, and applicable regulations
+- Improve response efficiency through structured incident handling
 
 ---
 
-## 3. Incident Response Phases
-
-### 🔍 3.1 Preparation
-- Maintain up-to-date incident playbooks and contacts
-- Train staff on detection and reporting
-- Define SLAs for incident response activities
-
-### 🚨 3.2 Detection & Analysis
-- Monitor logs, alerts, and threat intelligence feeds (e.g. via SIEM)
-- Identify indicators of compromise (IOCs)
-- Classify incidents by severity (Low, Medium, High, Critical)
-
-### 🔧 3.3 Containment
-- Isolate affected systems from the network
-- Disable compromised accounts
-- Preserve forensic evidence
-
-### 🔁 3.4 Eradication & Recovery
-- Remove malware or backdoors
-- Patch vulnerabilities
-- Restore systems from clean backups
-- Validate system integrity
-
-### 🧾 3.5 Post-Incident Activities
-- Conduct lessons-learned sessions
-- Update IR documentation and controls
-- Report incident outcomes to stakeholders/regulators (e.g. GDPR breach report within 72h)
+## 3. Incident Types
+This plan covers incidents such as:
+- Malware outbreaks (e.g., ransomware, trojans, spyware)
+- Unauthorized access or credential compromise
+- Data loss or exfiltration
+- Distributed Denial of Service (DDoS)
+- Insider threats or policy violations
+- Misconfiguration and human error
 
 ---
 
-## 4. Roles & Responsibilities
+## 4. Incident Response Lifecycle  
+_(Based on NIST 800-61 Rev. 2 & ISO 27035)_
 
-| **Role**             | **Responsibility**                                   |
-|----------------------|-------------------------------------------------------|
-| Incident Handler     | Lead response, communicate with team/stakeholders     |
-| IT/Security Team     | Perform technical containment, investigation          |
-| Legal & Compliance   | Assess regulatory exposure (GDPR, DPA)                |
-| Communications Lead  | Handle internal/external messaging                    |
+### 🧰 Phase 1: Preparation
+- Maintain updated IR playbooks and contact lists
+- Implement SIEM/SOAR monitoring systems (e.g., Splunk, QRadar)
+- Train staff on recognizing and reporting incidents
 
----
+### 🔍 Phase 2: Detection & Analysis
+- Identify IOCs via log analysis, threat intel, and user reports
+- Classify incidents using a standardized severity matrix
+- Initiate incident ticketing in the ITSM platform
 
-## 5. Reporting Channels
+### 🔐 Phase 3: Containment
+- Isolate compromised systems (quarantine, network segmentation)
+- Deactivate affected accounts or credentials
+- Document affected assets and timeline for forensics
 
-| **Channel**     | **Details**                           |
-|-----------------|----------------------------------------|
-| Email           | security@yourdomain.com               |
-| Phone Hotline   | +44 XXX XXX XXXX (24/7 Incident Desk) |
-| Internal Tool   | ITSM Portal > “Report Security Incident” form |
+### 🧼 Phase 4: Eradication & Recovery
+- Remove malware/backdoors, reimage infected hosts
+- Apply patches or reconfigure systems
+- Recover from backups after verifying system integrity
+- Resume business operations in phased manner
 
----
-
-## 6. Regulatory & Legal Compliance
-- GDPR: Article 33 breach notification  
-- UK DPA 2018: Data incident requirements  
-- PCI DSS: Reporting and root cause analysis if cardholder data is affected
-
----
-
-## 🧪 Testing & Review
-- Conduct tabletop exercises **twice a year**
-- Annual review of IR Plan and contacts
-- Integrate with BCP and Disaster Recovery testing
+### 📘 Phase 5: Lessons Learned
+- Conduct post-incident reviews within 10 business days
+- Generate root cause analysis (RCA) and report to senior management
+- Update policies, controls, and awareness training based on findings
 
 ---
 
-> 📌 **Last Updated:** [2025]  
+## 5. Roles & Responsibilities
+
+| **Role**                   | **Responsibility**                                                  |
+|----------------------------|---------------------------------------------------------------------|
+| Incident Response Lead     | Directs incident response efforts and coordinates communications    |
+| SOC Analyst / Engineer     | Analyzes indicators, correlates logs, triggers escalations          |
+| IT Operations / Infra Team | Executes containment/patching procedures, system reboots           |
+| Legal & Compliance         | Evaluates breach notifications under GDPR, DPA                      |
+| Communications Manager     | Crafts public/internal communications, if required                  |
+| Data Owner / Business Unit | Assesses business impact and supports asset validation              |
+
+---
+
+## 6. Communication Protocols
+
+- **Email:** Report incidents to `security@yourdomain.com`  
+- **24/7 Hotline:** Call +44 XXXX XXX XXX  
+- **Ticketing:** Use “Report Security Incident” in the ITSM Portal  
+- **Escalation Matrix:** Maintain contact tree by severity class (Low → Critical)
+
+---
+
+## 7. Regulatory Compliance
+
+| **Regulation**     | **Compliance Requirement**                                  |
+|--------------------|--------------------------------------------------------------|
+| GDPR (Article 33)  | Notify relevant authority within 72 hours of breach detection |
+| DPA 2018 (UK)      | Maintain incident logs and breach documentation              |
+| PCI DSS v4.0       | Investigate and document cardholder data breaches            |
+| ISO 27001:2022     | Implement and continually improve an Information Security Management System (ISMS) |
+
+---
+
+## 8. Review, Testing & Maintenance
+
+- **Review Frequency:** Annually or post major incident  
+- **Tabletop Exercises:** Conduct at least 2 per year  
+- **Automation Integration:** Align IR workflows with SOAR & SIEM  
+- **Version Control:** Maintain change log for each update and approval
+
+---
+
+> 🔄 **Last Updated:** July 2025  
+> 🔒 For questions, contact the IT Security Team at `security@yourdomain.com`  
+> 📎 Confidential – Internal Use Only
