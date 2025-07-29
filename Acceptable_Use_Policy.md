@@ -60,4 +60,4 @@ This policy will be reviewed annually and updated as required to reflect regulat
 ---
 
 > 🛡️ **Last Updated:** [July, 2025]  
-> 📎 For questions, contact the IT Security Team at [kanadeaadesh4444@gmail.com]
+> 📎 For questions, contact the IT Security Team at [securityteam@gmail.com]
